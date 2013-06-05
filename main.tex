@@ -1,0 +1,75 @@
+
+\documentclass{LU}
+
+\title{Bakalaura darba nosaukums}	   
+\thesistype{Bakalaura darbs}
+\author{Vārds Uzvārds}
+\studentid{xy00000}
+\supervisor{Vārds Uzvārds}
+\university{Latvijas Universitāte}
+\faculty{Fakultātes nosaukums}
+\location{Rīga}
+
+
+% apzīmējumu saraksts
+\input{apzimejumi}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document is example on how to use latex and \textit{lu.cls} classs.
+\end{abstract}
+ 
+
+\selectlanguage{english}
+\begin{abstract}
+This document is example on how to use latex and \textit{lu.cls} classs.
+\end{abstract}
+\selectlanguage{latvian}
+
+\pagenumbering{gobble} 
+
+\tableofcontents
+
+%------------------------------------------------APZĪMĒJUMI---------------------------------------------------------
+
+\printglossary[type=main,title={Apzīmējumu saraksts},toctitle={Apzīmējumu saraksts}]
+
+\pagenumbering{arabic} % sākam numurēt lapas no apzīmējumu saraksta (3. pielikums iekš LU 03.02.2012, 1/38 ) 
+
+\chapter*{Ievads} % * nepieliks numuru pie nosaukuma
+\addcontentsline{toc}{chapter}{Ievads}
+\pagestyle{plain}
+\input{ievads}
+
+%------------------------------------------------DARBS--------------------------------------------------------------
+
+\chapter{Problēmas pamatnostādne un literatūras apskats}
+\input{teorija}
+
+\chapter{Risinājumus}
+\input{risinajums}
+
+%----------------------------------------------SECINĀJUMI----------------------------------------------------------
+
+\chapter*{Secinājumi}
+\addcontentsline{toc}{chapter}{Secinājumi}
+\input{secinajumi}
+
+%---------------------------------------------LIETERATŪRA----------------------------------------------------------
+\renewcommand{\bibname}{Izmantotā literatūra un avoti}
+\bibliographystyle{alpha} % nekur nav minēts kādam jābūt atsaucu noformējumam
+\bibliography{main}
+\addcontentsline{toc}{chapter}{Izmantotā literatūra un avoti}
+
+
+%----------------------------------------------PIELIKUMS----------------------------------------------------------
+
+\begin{appendices}
+\chapter*{Pielikums}
+\input{pielikums}
+\end{appendices}
+
+\end{document}
