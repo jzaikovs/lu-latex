@@ -1,13 +1,13 @@
 
 \documentclass{LU}
 
-\title{Bakalaura darba nosaukums}	   
-\thesistype{Bakalaura darbs}
+\title{Darba nosaukums}	   
+\thesistype{Kursa / Bakalaura/ Maģistra darbs}
 \author{Vārds Uzvārds}
-\studentid{xy00000}
-\supervisor{Vārds Uzvārds}
+\studentid{Studenta apliecības numurs}
+\supervisor{Grāds Vārds Uzvārds}
 \university{Latvijas Universitāte}
-\faculty{Fakultātes nosaukums}
+\faculty{Fakultātes Nosaukums}
 \location{Rīga}
 
 
@@ -19,13 +19,17 @@
 \maketitle
 
 \begin{abstract}
-This document is example on how to use latex and \textit{lu.cls} classs.
+    Īss un kodolīgs darba apraksts!
+
+    Atslēgas vārdi: suns, kaķis, pele.
 \end{abstract}
  
 
 \selectlanguage{english}
 \begin{abstract}
-This document is example on how to use latex and \textit{lu.cls} classs.
+    Same abstract just in English.
+
+    Keywords: dog, cat, mouse.
 \end{abstract}
 \selectlanguage{latvian}
 
@@ -46,10 +50,10 @@ This document is example on how to use latex and \textit{lu.cls} classs.
 
 %------------------------------------------------DARBS--------------------------------------------------------------
 
-\chapter{Problēmas pamatnostādne un literatūras apskats}
+\chapter{Teorija}
 \input{teorija}
 
-\chapter{Risinājumus}
+\chapter{Praktiskā daļa}
 \input{risinajums}
 
 %----------------------------------------------SECINĀJUMI----------------------------------------------------------
@@ -60,7 +64,7 @@ This document is example on how to use latex and \textit{lu.cls} classs.
 
 %---------------------------------------------LIETERATŪRA----------------------------------------------------------
 \renewcommand{\bibname}{Izmantotā literatūra un avoti}
-\bibliographystyle{alpha} % nekur nav minēts kādam jābūt atsaucu noformējumam
+\bibliographystyle{abbrv} % nekur nav minēts kādam jābūt atsaucu noformējumam
 \bibliography{main}
 \addcontentsline{toc}{chapter}{Izmantotā literatūra un avoti}
 
@@ -71,5 +75,11 @@ This document is example on how to use latex and \textit{lu.cls} classs.
 \chapter*{Pielikums}
 \input{pielikums}
 \end{appendices}
+
+%---------------------------------------------REĢISTRĀCIJAS LAPA (TODO)-------------------------------------------
+
+\chapter*{Reģistrācijas lapa}
+\input{registracijaslapa}
+
 
 \end{document}
