@@ -1,26 +1,51 @@
-lu-latex
-========
+# LU LaTeX šablons
 
-Mans izmantotais LaTeX šablons bakalaura darbam.
+LaTeX šablons akadēmiskiem Latvijas Universitātes darbiem.  
+  
+## Izmantošana
+Komandas, kas jāizpilda, lai kompilētu LaTeX dokumentu.  
+  
+[Nix](https://nixos.org/manual/nix/stable/):  
+- `nix build`   
+  
+Linux:  
+- `make`  
+  
+Windows:  
+- `build.bat`  
+  
+## Priekšnosacījumi
+Saraksts ar pakotnēm un instalācijām, kas nepieciešamas katrā OS, lai kompilētu LaTeX dokumentu.  
+  
+[Nix](https://nixos.org/manual/nix/stable/):  
+- Pakotnes automātiski nokonfigurētas izmantojot `flake.nix`  
+  
+Linux pakotnes:  
+- `coreutils`
+- `gnumake`
+- `corefonts` (Microsoft fonti)
+- `gnused`
+- `gnugrep`
+  
+Windows instalācijas:  
+- [`basic-miktex.exe`](https://miktex.org/download)  
 
-Pašlaik šis ir vel uzmetums. Domāju, ka vēlāk nopucēšu saturīgāk.
-
-## Linux
-
-Nepieciešams:
-
-* Nezinu precīzi, uzliku `texlive-full`
-
-Būvējams ar `make`
-
-
-## Windows
-
-Nepieciešams:
-
-* `basic-miktex.exe` (bing it ;) )  + instalācija ieķeksēt, lai novelk trūkstošās pakotnes (ja pareizi atceros)
-* var gadīties, ka pie PATH japieliek tas miktex
-
-Būvējams ar `build.bat`
-
-
+Linux un Windows LaTeX pakotnes:
+- `scheme-small` (LaTeX pamata paka, kas satur `xelatex` un citus zvērus)
+- `thmtools`
+- `cleveref`
+- `glossaries`
+- `mfirstuc`
+- `xfor`
+- `datatool`
+- `svn-prov`
+- `bigfoot`
+- `xstring`
+- `was`
+- `multirow`
+- `tocloft`
+- `titlesec`
+- `appendix`
+- `bookmark`
+- `soul`
+  

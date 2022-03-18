@@ -23,6 +23,8 @@
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
+out/
+result*
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -113,7 +115,7 @@ acs-*.bib
 *.lzs
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
+*.ist
 
 # gnuplottex
 *-gnuplottex-*
