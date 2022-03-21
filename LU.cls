@@ -1,5 +1,5 @@
-\NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{LU}[2013/05/04 v1.0, Latvijas Universitāte]
+\NeedsTeXFormat{LaTeX2e}[2018/12/01]
+\ProvidesClass{LU}[2019/04/28 v1.1, Latvijas Universitāte]
 
 % Bakalaura darba, maģistra darbam paredzētā _report_ klase, burti ir 12pt uz A4 papīra (5.2. iekš LU 03.02.2012, 1/38 )
 \LoadClass[a4paper,12pt]{report}
@@ -20,7 +20,12 @@
 \usepackage{color}
 \usepackage{nameref}
 \usepackage{hyperref}
+\usepackage{varioref}
 \usepackage{cleveref}
+\usepackage{soul}
+\usepackage[toc,acronym]{glossaries}
+
+\usepackage{booktabs}
 
 % saišu krāsas iekš PDF (atsaucēm, saturam, saitēm), [ja nemaldos tad gaumes lieta]
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=darkgray}
@@ -46,8 +51,10 @@
 \setlength{\parskip}{3pt}
 
 \usepackage{setspace}
-\usepackage{varioref}
 \usepackage{graphicx}
+
+% use for tables with multirow support
+\usepackage{multirow}
 
 % atkal gaumes lieta, kā tiek noformētie šie fragmenti
 \theoremstyle{plain}
@@ -86,16 +93,15 @@
 \usepackage{xcolor}
 
 
-
 \patchcmd{\abstract}{\null\vfil}{}{}{}
 
 
 
 % Nodaļu nosaukumu labošana - aizdomas, ka šo var izdarīt labāk un pareizāk
 \usepackage{titlesec}
-\titleformat{\chapter}{\Huge\bfseries}{\thechapter.\hspace{10pt}}{0pt}{\Huge\bfseries\uppercase}
-\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\chapter}{\normalfont\fontsize{14}{14}\bfseries}{\thechapter.\hspace{10pt}}{0pt}{\normalfont\fontsize{14}{14}\bfseries\uppercase}
+\titleformat{\section}{\normalfont\fontsize{14}{14}\bfseries}{\thesection.\hspace{10pt}}{0pt}{}
+\titleformat{\subsection}{\normalfont\fontsize{14}{14}\bfseries}{\thesubsection.\hspace{10pt}}{0pt}{}
 \titlespacing{\chapter}{0cm}{2em}{2em} % Nodaļu virsraksat atstarpes no augšas un apakšas
 
 
